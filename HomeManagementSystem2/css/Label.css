@@ -1,0 +1,43 @@
+﻿.DescriptionLabel {
+    font-family: 华文中宋;
+    font-size: medium;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.Label-VerticalAlign {
+    vertical-align: middle;
+    font-size: large;
+}
+.inlineStyle
+{
+  
+    display:inline;
+}
+
+.blockStyle {
+    display:block;
+}
+    .DescriptionLabel-centeralign {
+        margin:0px auto;
+        margin-bottom:20px;
+        font-size:large;
+    }
+
+.DescriptionLabel-orange {
+    font-family:微软雅黑;
+    font-size:large;
+    font-weight:200;
+    margin:15px auto;
+    color:orange;
+    vertical-align:middle;
+}
+.NotificationLabel {
+    font-family: 微软雅黑;
+    font-size: xx-large;
+    font-weight: 300;
+    margin:10px auto;
+}
+/*暂存下*/

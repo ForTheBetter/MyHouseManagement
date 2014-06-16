@@ -1,0 +1,20 @@
+﻿.MyInput {
+    background: #ffffff;
+    border: 1px solid #b7b7b7;
+    color: #003366;
+    cursor: text;
+    font-family: "arial";
+    font-size: 9pt;
+    height: 18px;
+    padding: 1px;
+}
+
+.Yuanjiao {
+ -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+    .Yuanjiao:focus {
+    border-color:#FFCF88;
+    }

@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MuBan.master.cs" Inherits="HomeManagementSystem2.MuBan" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../css/MuBanStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div id="header">
+            <div class="banner">
+                <div class="tabbar">
+                    <div class="tabs">
+                        <div class="float_icon">新</div>
+                        <a href="http://www.mianfeimoban.com/" title="首页" class="actived" style="margin-left: 0; padding-left: 0;">首 页</a>
+                        <a href="#" title="二手房信息">二手房</a>
+                        <a href="#" title="新房信息">新房</a>
+                        <a href="#" title="我要求租">求租</a>
+                        <a href="../SellHouse_first.aspx" title="我要卖房">我要卖房</a>
+                        <a href="hirePage.aspx" title="我要出租">我要出租</a>
+
+                    </div>
+                    <div class="bg">
+                        <div class="nw"></div>
+                        <div class="cen"></div>
+                        <div class="cen"></div>
+                        <div class="cen"></div>
+                        <div class="cen"></div>
+                        <div class="ne"></div>
+                    </div>
+                    <div id="LoginDiv" runat="server">
+                        <asp:Label ID="LoginStatus" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="ToUserDetailOrLogin" runat="server">HyperLink</asp:HyperLink>
+                    </div>
+                </div>
+            </div>
+            <div class="bar"></div>
+        </div>
+
+        <div id="center" >
+
+            <div id="center-left">
+                <%-- <div  class="search_form">
+                 <asp:TextBox ID="TextBox1" runat="server" CssClass="sinput"  autofocus x-webkit-speech></asp:TextBox>
+                   <asp:Button ID="Button1" runat="server" Text="新房" CssClass="sbtn" />
+                   <asp:Button ID="Button2" runat="server" Text="二手房" CssClass="sbtn"/>
+               </div>--%>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        <br />
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+            <div id="center-right">
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/Resources/129.bmp" />
+            </div>
+                <span style="clear:both"></span>
+
+
+        </div>
+            <span style="clear:both"></span>
+        <div id="footer">
+            <a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><br />
+            <a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><br />
+            <a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><a href="#">友情链接</a><br />
+        </div>
+        <span style="clear:both"></span>
+    </form>
+</body>
+</html>

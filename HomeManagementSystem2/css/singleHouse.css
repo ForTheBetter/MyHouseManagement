@@ -1,0 +1,206 @@
+#propNav {
+padding: 7px 0 18px 15px;
+font-size: 12px;
+}
+.propertyV2 .propInfoTitle {
+font-size: 16px;
+font-weight: bold;
+color: #000;
+margin: 0 0 25px;
+padding-top: 21px;
+overflow: hidden;
+background-position: -999px 0!important;
+background-repeat: repeat-x;
+text-align: center;
+}
+#content-propview {
+    float: left;
+    width: 788px;
+    border: 1px solid #90CF2C;
+    height: 400px;
+    text-align: left;
+    color: #333;
+    font-family: Arial,"\5B8B\4F53",Helvetica,sans-serif;
+    font-size: 12px;
+}
+.propinfo {
+position: relative;
+float: left;
+width: 377px;
+padding-bottom: 5px;
+display: inline;
+margin-top: 4px;
+}
+.prop_basic {
+position: relative;
+width: 344px;
+}
+ul {
+text-align: left;
+list-style: none;
+margin: 0;
+padding: 0;
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+.propimg_switch {
+float: left;
+width: 326px;
+padding: 0 47px 0 27px;
+}
+.prop_basic_left {
+margin-left: -20px;
+padding: 0 90px 0 0;
+width: 199px;
+border-bottom: #d2d2d2 1px dashed;
+height: 30px;
+color: #333;
+}
+.prop_basic_right {
+position: absolute;
+left: 199px;
+top: 0;
+width: 144px;
+}
+.leftstyle {
+height: 26px;
+padding-top: 4px;
+line-height: 24px;
+}
+.addressStyle {
+width: 343px;
+padding-right: 0;
+}
+.list_spstyle {
+height: 24px;
+padding-top: 6px;
+line-height: 24px;
+}
+li em {
+color: #f60;
+font-family: tahoma;
+font-size: 24px;
+font-weight: normal;
+font-style: normal;
+line-height: 20px;
+}
+.report-box {
+width: 342px;
+height: 104px;
+margin-top: 20px;
+background: #f6f9ff;
+border: 1px solid #bbd6f0;
+}
+.inner {
+width: 340px;
+height: 102px;
+border: 1px solid;
+border-color: #fff #f6f9ff #f6f9ff #f9fcff;
+}
+.tel {
+height: 42px;
+line-height: 42px;
+padding: 9px 5px 9px 69px;
+font-size: 30px;
+font-family: Tahoma;
+font-weight: 700;
+background: url(http://pages.anjukestatic.com/img/myanjuke/myv2/tel_icon.png) no-repeat 13px 9px;
+border-bottom: 1px solid #d5e3f1;
+}
+b {
+font-weight: bold;
+}
+.report {
+position: relative;
+height: 40px;
+line-height: 40px;
+padding-left: 13px;
+color: #0041D9;
+border-top: 1px solid #fff;
+cursor: pointer;
+}
+#navigation-propview {
+border-left-width: 0!important;
+border: 1px solid #90CF2C;
+float: left;
+width: 179px;
+height: 400px;
+text-align: left;
+color: #333;
+font-family: Arial,"\5B8B\4F53",Helvetica,sans-serif;
+font-size: 12px;
+}
+.brokerV2 {
+width: 179px;
+overflow: hidden;
+}
+.brokerV2 .propBrokerBox {
+float: left;
+width: 179px;
+background: #FCFEF9;
+}
+.brokerV2 .propBrokerPhoto {
+position: relative;
+width: 100px;
+height: 133px;
+overflow: hidden;
+margin: 23px auto 0;
+}
+.brokerV2 .prop_new_line {
+padding-bottom: 0;
+padding: 12px 0 15px 0;
+height: 20px;
+line-height: 20px;
+text-align: center;
+font-size: 14px;
+font-weight: bold;
+}
+.brokerV2 .mycompany {
+padding-bottom: 17px;
+overflow: hidden;
+margin: 0 11px 0 20px;
+padding: 6px 0 12px;
+line-height: 22px;
+border-bottom: 1px #DDD solid;
+width: 140px;
+}
+.mycompany p {
+margin: 0;
+width: 100%;
+text-align: left;
+white-space: nowrap;
+overflow: hidden;
+word-wrap: normal;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+}
+#extra-propview {
+clear: both;
+width: 970px;
+position: relative;
+border-top: 1px #9BD038 solid;
+background: url(http://pages.anjukestatic.com/img/comm/bg21_5x40.gif) repeat-x;
+padding-top:10px;
+}
+.tag{
+background: url(http://pages.anjukestatic.com/img/comm/prop_view_tagsbg.gif) no-repeat 0 2px;
+text-indent: 20px;
+color: #1F7300;
+}
+#extra-propview .pic {
+margin: 10px auto;
+text-align: center;
+}
+#extra-propview img {
+border: 1px #DDD solid;
+padding: 5px;
+}
+#extra-propview .descriBox{
+    color: rgb(115,115,115);
+    line-height: 30px;
+    max-width: 510px!important;
+}

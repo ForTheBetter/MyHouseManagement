@@ -1,0 +1,494 @@
+﻿.search_text
+{
+    height: 44px;
+    line-height: 44px;
+}
+
+.search_text_box
+{
+    line-height: 28px;
+    position: relative;
+    height: 32px;
+    border-top: 1px solid #AFAFAF;
+    border-left: 1px solid #AFAFAF;
+    border-bottom: 1px solid #D6D6D6;
+    background-color: #FFF;
+    float: left;
+    display: block;
+    top: 0px;
+    left: 160px;
+    width: 336px;
+    border-right-style: none;
+    border-right-color: inherit;
+    border-right-width: 0px;
+}
+.glbSearch .kw {
+padding: 0 0 0 11px;
+width: 488px;
+height: 32px;
+line-height: 32px;
+border: 1px solid #CDCDCD;
+border-right: 0;
+color: #999;
+border-radius: 3px;
+vertical-align: top;
+outline: none;
+font-size: 12px;
+}
+.search_input_text
+{
+    padding: 0 0 0 11px;
+    width:440px;
+    height:28px;
+    margin: 0px;
+    border: 3px solid #ef0dba;
+    color: #999999;
+    border-width: 2px;
+    font-size: 12px;
+    line-height: 14px;
+    outline: medium none;
+    
+}
+
+.search_text_button
+{
+    position: relative;
+    padding-top: 1px;
+    border:3px solid #EB6100;
+    margin: 0px;
+    height:33px;
+    left: 160px;
+    float: left;
+    top: 0px;
+    color:black;
+    Width:69px;
+    background-color:#EB6100;
+}
+
+.topFilter 
+{
+    border: 1px solid #54D020;
+    width: 702px;
+    font: 12px/1.5 tahoma,arial,宋体b8b\4f53;
+    padding-bottom: 12px;
+    margin-bottom:10px;
+}
+
+.topFilter .topHeader 
+{
+    height: 26px;
+    background: #F8F8F8;
+    line-height: 26px;
+}
+
+.topHeader .findH 
+{
+    position: absolute;
+    margin-left: 600px;
+    background: url(http://pages.aifcdn.com/img/aflist/42/list_icons.png) 0 -1050px no-repeat;
+    padding-left: 15px;
+}
+
+.topFilter .topContent 
+{
+    border-top: 1px solid #DDD;
+    z-index: 0;
+    padding: 20px 0 0 20px;
+    width:684px;
+}
+
+.topContent .pos, .topContent .price, .topContent .attr, .topContent .house_type, .topContent .decorating
+{
+    line-height: 25px;
+    width:620px;
+}
+
+.topContent .topContentSpan 
+{
+    position: absolute;
+    
+}
+
+.topContent .show_contents 
+{
+    margin-left: 40px;
+    margin-right: 0px;
+    position:relative;
+    float: left;
+    width:60px;
+}
+
+.topContent .topContentSpans 
+{
+    display: inline-block;
+    padding-left: 40px;
+    width: 620px;
+}
+
+
+.topContent strong 
+{
+    margin-right: 12px;
+    color: #EB6100;
+    width:60px;
+}
+
+.topHeader .topHeaderBut 
+{
+    background: white;
+    width: auto;
+    height: 25px;
+    border: 1px solid #DDD;
+    border-top: 2px solid #F4F4F4;
+    border-bottom: none;
+    margin-left: 10px;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    line-height: 25px;
+    padding: 0 8px;
+}
+
+
+
+
+.listing 
+{
+    width: 702px;
+    margin: 0;
+}
+.listing .top_bar 
+{
+    height: 40px;
+    padding: 0 0 0 15px;
+    line-height: 40px;
+    background: url("http://pages.aifcdn.com/img/aflist/42/lp_repBg.png") repeat-x 0 -481px;
+    border-bottom: 1px solid #DDD;
+    width:688px;
+}
+.glb_xp_topBar, .listing .glb_xp_topBar 
+{
+    border-top: 2px solid #48A843;
+}
+
+.fl 
+{
+    float: left;
+    height:22px;
+}
+.top_bar .show_total 
+{
+    color: #EB6100;
+    font-weight: bold;
+}
+.top_bar .price 
+{
+    padding: 0 0 0 15px;
+}
+.top_bar .sort_select_box 
+{
+    _padding: 8px 0 0 0;
+   
+}
+.newSort 
+{
+    margin-left: -100px;
+    position: absolute;
+    _margin-top: -8px;
+    margin-right:0px;
+}
+.newsort .sortbar 
+{
+    margin-left:10px;
+}
+.newSort a:hover, .newSort a:visited, .newSort a:link 
+{
+    color: black;
+    display: inline-block;
+}
+
+.top_bar .simple_pages 
+{
+    padding: 9px 0 0 0;
+    width:126px;
+    height:31px;
+}
+.fr 
+{
+    float: left;
+}
+div.simple_multipage 
+{
+    position: relative;
+    text-align: right;
+    font-size: 12px;
+    line-height: 20px;
+    float:left;
+    width:200px;
+}
+div.simple_multipage .pagelink 
+{
+    border: 1px #CCC solid;
+    height: 20px;
+    line-height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+}
+.simple_multipage .noprexpage 
+{
+    background-position: 7px -155px;
+    float:left;
+    width:50px;
+}
+div.simple_multipage .current 
+{
+    line-height: 22px;
+    padding: 0 5px;
+    width:22px;
+    float:left;
+}
+.simple_multipage .nextpage 
+{
+    background-position: 45px -175px;
+    float:left;
+    width:50px;
+}
+
+.newSort_1 a:hover, .newSort_1 a:visited, .newSort_1 a:link {
+color: black;
+display: inline-block;
+}
+
+
+
+
+
+
+
+.list
+{
+    float:left;
+    margin:0;
+    width:702px;
+}
+
+hr
+{
+    background-color: blue;
+}
+
+dl
+{
+    font-size: 12px;
+    margin: 0px;
+    display: block;
+    overflow: hidden;
+}
+
+.dd_list_house
+{
+    padding: 15px 0px 15px 10px;
+    border-bottom: 1px dashed #999999;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.dt_photo
+{
+    float: left;
+    width: 140px;
+    height:110px;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    list-style: none;
+}
+
+
+.dd_houseInfo
+{
+    float: left;
+    padding: 0;
+    list-style: none;
+    width: 320px;
+    margin-top: -3px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.house_description
+{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4em;
+    text-decoration: underline;
+}
+
+.p_tag
+{
+    font-size: 12px;
+    overflow: hidden;
+    vertical-align: baseline;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+
+.p_name
+{
+    font-size: 12px;
+    margin-top: 8px;
+    overflow: hidden;
+    vertical-align: baseline;
+    color: #808080;
+}
+
+
+.dd_price
+{
+    font-family: Tahoma,Arial;
+    margin: 50px 0px 0px 0px;
+    text-align: left;
+    width: 200px;
+    height: 25px;
+    color: #EB6100;
+    float: left;
+}
+
+p
+{
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.dd_list_house .info_bot 
+{
+    position: relative;
+    padding: 0 0 0 47px;
+    width: 500px;
+    margin-left: 15px;
+}
+
+.info_bot .b 
+{  
+    background:bottom no-repeat 0 0;
+    font-size: 14px;
+    color: yellow;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 13px;
+    margin-top:26px;
+}
+.info_bot .bot_R 
+{
+    width: 500px;
+    line-height: 26px;
+    margin-top:-3px;
+    margin-bottom:-3px;
+    margin-left:3px;
+}
+div.bot_R a:link, div.bot_R a:visited 
+{
+    color:red;
+    font-size:14px;
+}
+.info_bot i 
+{
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 36px;
+    height: 18px;
+    background:url("../img/ad_back_img.png") no-repeat 0 0;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 13px;
+}
+
+.dd_list_house .dd_price strong
+{
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+
+div, ul, li, a, h1, h2, h3, em, i 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+}
+user agent stylesheeti, cite, em, var, address, dfn 
+{
+    font-style: italic;
+}
+
+.thread_theme_4 
+{
+    padding: 5px 0;
+    background: #f5f1c8;
+    width: 702px;
+    overflow: hidden;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom:1px solid #CCC;
+}
+.thread_theme_4 .l_thread_info 
+{
+    margin-left: 215px;
+}
+element.style 
+{
+}
+
+.l_posts_num 
+{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+.l_posts_num li 
+{
+    margin-left:100px;
+    display: inline;
+}
+.pager_theme_3 
+{
+    margin: 0 10px 0 0;
+}
+.pager_theme_3 a:hover 
+{
+    background: #E9F1F7;
+}
+.pager_theme_3 a, .pager_theme_3 span 
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #E7ECF0;
+    color: mediumBlue;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 5px;
+    overflow: hidden;
+    padding: 0 8px;
+    text-align: center;
+    width: auto;
+    text-decoration: none;
+}
+a 
+{
+    color: #1D53BF;
+    outline: 0;
+}

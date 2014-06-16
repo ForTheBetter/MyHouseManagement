@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD200092-3E9F-43A5-B7FC-F2A2658F2797}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeManagementSystem2</RootNamespace>
+    <AssemblyName>HomeManagementSystem2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.607, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager, Version=7.4.4.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoCompleteExtra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\www.NewXing.com\AutoCompleteExtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoCompleteService.asmx" />
+    <Content Include="css\aa11.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\Button.css" />
+    <Content Include="css\button1.css" />
+    <Content Include="css\head_8020.css" />
+    <Content Include="css\house.css" />
+    <Content Include="css\hoverbox.css" />
+    <Content Include="css\ie_fixes.css" />
+    <Content Include="css\jquery-webox.css" />
+    <Content Include="css\Label.css" />
+    <Content Include="css\MuBanStyle.css" />
+    <Content Include="css\personenter.css" />
+    <Content Include="css\rent.css" />
+    <Content Include="css\SellHouse.css" />
+    <Content Include="css\signin-css.css" />
+    <Content Include="css\singleHouse.css" />
+    <Content Include="css\Table.css" />
+    <Content Include="css\Textbox.css" />
+    <Content Include="css\Wrapper.css" />
+    <Content Include="css\zzmessage.css" />
+    <Content Include="hirePage.aspx" />
+    <Content Include="hirePage3.aspx" />
+    <Content Include="hirePage_2.1.aspx" />
+    <Content Include="hirePage_2.aspx" />
+    <Content Include="img\index_1375284567_766.png" />
+    <Content Include="img\message1.jpg" />
+    <Content Include="img\11298403059e69c16cl.jpg" />
+    <Content Include="img\ad0.jpg" />
+    <Content Include="img\ad1.jpg" />
+    <Content Include="img\ad2.jpg" />
+    <Content Include="img\anjuke.png" />
+    <Content Include="img\house.BMP" />
+    <Content Include="img\jingjiren.jpg" />
+    <Content Include="img\login-background.jpg" />
+    <Content Include="img\photo01.jpg" />
+    <Content Include="img\photo02.jpg" />
+    <Content Include="img\yuanxixing.png" />
+    <Content Include="index3.aspx" />
+    <Content Include="Jingjiren_ChangePassword.aspx" />
+    <Content Include="Jingjiren_login.aspx" />
+    <Content Include="Jingjiren_main.aspx" />
+    <Content Include="Jingjiren_OnePiece.aspx" />
+    <Content Include="Jingjiren_RentOnePiece.aspx" />
+    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="js\jquery-webox.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\js-login.js" />
+    <Content Include="js\rent.js" />
+    <Content Include="js\zzshow.js" />
+    <Content Include="js\zzshowad.js" />
+    <Content Include="js\zzzswitch.js" />
+    <Content Include="login.aspx" />
+    <Content Include="NewHouse.aspx" />
+    <Content Include="Oldhouse.aspx" />
+    <Content Include="postRequirement.htm" />
+    <Content Include="Resources\10.jpg" />
+    <Content Include="Resources\1121.jpg" />
+    <Content Include="Resources\1122.jpg" />
+    <Content Include="Resources\1123.jpg" />
+    <Content Include="Resources\1239.jpg" />
+    <Content Include="Resources\127.bmp" />
+    <Content Include="Resources\128.bmp" />
+    <Content Include="Resources\129.bmp" />
+    <Content Include="Resources\2.jpg" />
+    <Content Include="Resources\20130722160118_3241.png" />
+    <Content Include="Resources\20130722170040_1788.png" />
+    <Content Include="Resources\20130727160919_9631.png" />
+    <Content Include="Resources\20130727160949_4127.png" />
+    <Content Include="Resources\20130727192851_4102.png" />
+    <Content Include="Resources\3.jpg" />
+    <Content Include="Resources\get %281%29.jpg" />
+    <Content Include="Resources\get.jpg" />
+    <Content Include="Resources\index_1375256728_562.png" />
+    <Content Include="Resources\index_1375273357_853.png" />
+    <Content Include="Resources\index_1375273875_857.png" />
+    <Content Include="search_result_rent.aspx" />
+    <Content Include="SellHouse_first.aspx" />
+    <Content Include="SellHouse_forth.aspx" />
+    <Content Include="SellHouse_second.aspx" />
+    <Content Include="SellHouse_third.aspx" />
+    <Content Include="showimg.aspx" />
+    <Content Include="showmultiimg.aspx" />
+    <Content Include="singleHouse.aspx" />
+    <Content Include="singleSellHouse.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCompleteService.asmx.cs">
+      <DependentUpon>AutoCompleteService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commons.cs" />
+    <Compile Include="hirePage.aspx.cs">
+      <DependentUpon>hirePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hirePage.aspx.designer.cs">
+      <DependentUpon>hirePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hirePage3.aspx.cs">
+      <DependentUpon>hirePage3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hirePage3.aspx.designer.cs">
+      <DependentUpon>hirePage3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hirePage_2.1.aspx.cs">
+      <DependentUpon>hirePage_2.1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hirePage_2.1.aspx.designer.cs">
+      <DependentUpon>hirePage_2.1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hirePage_2.aspx.cs">
+      <DependentUpon>hirePage_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hirePage_2.aspx.designer.cs">
+      <DependentUpon>hirePage_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index3.aspx.cs">
+      <DependentUpon>index3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index3.aspx.designer.cs">
+      <DependentUpon>index3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs" />
+    <Compile Include="Jingjiren_ChangePassword.aspx.cs">
+      <DependentUpon>Jingjiren_ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jingjiren_ChangePassword.aspx.designer.cs">
+      <DependentUpon>Jingjiren_ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jingjiren_login.aspx.cs">
+      <DependentUpon>Jingjiren_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jingjiren_login.aspx.designer.cs">
+      <DependentUpon>Jingjiren_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jingjiren_main.aspx.cs">
+      <DependentUpon>Jingjiren_main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jingjiren_main.aspx.designer.cs">
+      <DependentUpon>Jingjiren_main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jingjiren_OnePiece.aspx.cs">
+      <DependentUpon>Jingjiren_OnePiece.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jingjiren_OnePiece.aspx.designer.cs">
+      <DependentUpon>Jingjiren_OnePiece.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jingjiren_RentOnePiece.aspx.cs">
+      <DependentUpon>Jingjiren_RentOnePiece.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jingjiren_RentOnePiece.aspx.designer.cs">
+      <DependentUpon>Jingjiren_RentOnePiece.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanYe\base.Master.cs">
+      <DependentUpon>base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuBanYe\base.Master.designer.cs">
+      <DependentUpon>base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MuBanYe\MuBan.Master.cs">
+      <DependentUpon>MuBan.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuBanYe\MuBan.Master.designer.cs">
+      <DependentUpon>MuBan.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewHouse.aspx.cs">
+      <DependentUpon>NewHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewHouse.aspx.designer.cs">
+      <DependentUpon>NewHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oldhouse.aspx.cs">
+      <DependentUpon>Oldhouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oldhouse.aspx.designer.cs">
+      <DependentUpon>Oldhouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search_result_rent.aspx.cs">
+      <DependentUpon>search_result_rent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search_result_rent.aspx.designer.cs">
+      <DependentUpon>search_result_rent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellHouse_first.aspx.cs">
+      <DependentUpon>SellHouse_first.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellHouse_first.aspx.designer.cs">
+      <DependentUpon>SellHouse_first.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellHouse_forth.aspx.cs">
+      <DependentUpon>SellHouse_forth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellHouse_forth.aspx.designer.cs">
+      <DependentUpon>SellHouse_forth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellHouse_second.aspx.cs">
+      <DependentUpon>SellHouse_second.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellHouse_second.aspx.designer.cs">
+      <DependentUpon>SellHouse_second.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellHouse_third.aspx.cs">
+      <DependentUpon>SellHouse_third.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellHouse_third.aspx.designer.cs">
+      <DependentUpon>SellHouse_third.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showimg.aspx.cs">
+      <DependentUpon>showimg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showimg.aspx.designer.cs">
+      <DependentUpon>showimg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showmultiimg.aspx.cs">
+      <DependentUpon>showmultiimg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showmultiimg.aspx.designer.cs">
+      <DependentUpon>showmultiimg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="singleHouse.aspx.cs">
+      <DependentUpon>singleHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="singleHouse.aspx.designer.cs">
+      <DependentUpon>singleHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="singleSellHouse.aspx.cs">
+      <DependentUpon>singleSellHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="singleSellHouse.aspx.designer.cs">
+      <DependentUpon>singleSellHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validator.ashx.cs">
+      <DependentUpon>Validator.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MuBanYe\MuBan.Master" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Validator.ashx" />
+    <Content Include="MuBanYe\base.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49671</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:39608/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

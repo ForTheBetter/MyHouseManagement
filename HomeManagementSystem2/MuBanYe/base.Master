@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="base.master.cs" Inherits="HomeManagementSystem2._base" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="stylesheet"  href="../css/aa11.css" type="text/css" />
+    <link rel="stylesheet"  href="../css/zzmessage.css" type="text/css" />
+    <script src="../js/jquery-1.4.2.min.js"></script>
+    <script src="../js/zzshow.js"></script>
+    <style type="text/css">
+        
+        .list li
+        {
+            float: left;
+            overflow: hidden;
+            display: inline;
+            width: 240px;
+            margin: 0 40px 0 15px;
+            line-height: 1.6;
+        }
+
+        .high-quality
+        {
+            height: 436px;
+            padding: 0;
+        }
+    </style>
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fcglConnectionString %>" SelectCommand="SELECT * FROM [information]" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:fcglConnectionString %>" SelectCommand="select * from person, agent where person.person_id=agent.person_id"></asp:SqlDataSource>
+        <div id="container">
+            <div id="header">
+                <div class="top-nav">
+                   <!-- 未登录状态 Start -->
+                   <div class="zzab">
+                        <div class="zzab1">
+                            <asp:Label ID="please1" runat="server" Text="aa"></asp:Label>
+                            <asp:HyperLink ID="zzHyperLink" runat="server">HyperLink</asp:HyperLink>
+                            <a href="#" id="zzbutton" class="zzmessage"></a>
+                            <a href="#" _soj="HeaderTop" style="padding: 0px 3px;">经纪人</a>
+                        </div>
+
+                        <div id="zzremind">
+                            <h3>信息</h3>
+                            <div class="showMessageBox" runat="server" id="showMessageBox">
+                            </div>
+                            <div class="more" id="more">
+                                <span><asp:LinkButton ID='LinkButton4' runat='server' OnClick='delete_dg'>确认</asp:LinkButton></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 未登录状态 End -->
+                </div>
+                <div class="header_content clearfix">
+                    <div class="header_logo"><a href="#" title="房产网">房产网</a></div>
+                    <div class="tabbar_content">
+                        <div class="anjuke_tabbar">
+                            <ul>
+                                <li class="home"><a id="zzzz1" href="index3.aspx" title="房产" _soj="navigation" class="selected" ><span>首 页</span></a></li>
+                                <li class="fangyuan"><a id="zzzz2" href="#" title="二手房信息" _soj="navigation" ><span>二手房</span></a></li>
+                                <li class="fangyuan"><a id="zzzz3" href="NewHouse.aspx" title="新房信息" _soj="navigation"><span>新 房</span></a></li>
+                                <li class="fangyuan"><a id="zzzz4" href="search_result_rent.aspx" title="租房信息" _soj="navigation"><span>租房</span></a></li>
+                                <li class="fangyuan"><a id="zzzz5" href="SellHouse_first.aspx" title="我要卖房" _soj="navigation"  ><span>我要卖房</span></a></li>
+                                <li class="rental nav_last"><a id="zzzz6" href="hirePage.aspx" title="我要出租" target="_blank" _soj="navigation"><span>我要出租</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+    <div class="main-cont" xmlns="http://www.w3.org/1999/html">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        
+
+                <div class="sidebar">
+                    <div class="mod new-information">
+                        <h3>最新资讯</h3>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" _soj="RNews" target="_blank">
+                                    <em><asp:Label ID="info0" runat="server" Text="aa"></asp:Label></em>
+                                    <span><asp:Label ID="infocontent0" runat="server" Text="aa"></asp:Label></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" _soj="RNews" target="_blank">
+                                    <em><asp:Label ID="info1" runat="server" Text="aa"></asp:Label></em>
+                                    <span><asp:Label ID="infocontent1" runat="server" Text="aa"></asp:Label></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" _soj="RNews" target="_blank">
+                                    <em><asp:Label ID="info2" runat="server" Text="aa"></asp:Label></em>
+                                    <span><asp:Label ID="infocontent2" runat="server" Text="aa"></asp:Label></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" _soj="RNews" target="_blank">
+                                    <em><asp:Label ID="info3" runat="server" Text="aa"></asp:Label></em>
+                                    <span><asp:Label ID="infocontent3" runat="server" Text="aa"></asp:Label></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mod broker-area">
+                        <h3>经纪人</h3>
+                        <ul>
+                            <li class="img-txt">
+                                <a href="#" class="thumb" target="_blank">
+                                    <img src="./showimg.aspx?AgentId=1" alt=""></a>
+                                <div class="info">
+                                    <div class="broker-name">
+                                        <a href="#" target="_blank"><asp:Label ID="agent0" runat="server" Text="aa"></asp:Label></a>
+                                        <a href="#" class="diamond diamond-crown" target="_blank"></a>
+                                    </div>
+                                    <p class="address"><asp:Label ID="address0" runat="server" Text="aa"></asp:Label></p>
+                                    <p class="broker-tel">电话：<asp:Label ID="phone0" runat="server" Text="aa"></asp:Label></p>
+                                </div>
+                            </li>
+                            <li class="img-txt">
+                                <a href="#" class="thumb" target="_blank">
+                                    <img src="./showimg.aspx?AgentId=2" alt=""></a>
+                                <div class="info">
+                                    <div class="broker-name">
+                                        <a href="#" target="_blank"><asp:Label ID="agent1" runat="server" Text="aa"></asp:Label></a>
+                                        <a href="#" class="diamond diamond-crown" target="_blank"></a>
+                                    </div>
+                                    <p class="address"><asp:Label ID="address1" runat="server" Text="aa"></asp:Label></p>
+                                    <p class="broker-tel">电话：<asp:Label ID="phone1" runat="server" Text="aa"></asp:Label></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="corner" href="#" _soj="RUFS" target="_blank">寻找优秀经纪人 »</a>
+                    </div>
+                </div>
+            <div id="footer">
+                <div class="partner">
+                    <span>合作伙伴：</span>
+                    <ul>
+                        <li><a href="http://www.kankanews.com/">看看新闻网</a></li>
+                        <li><a href="http://www.jfdaily.com/">解放牛网</a></li>
+                        <li><a href="http://www.daqi.com/">大旗网</a></li>
+                        <li><a href="http://www.taskcn.com/">威客网</a></li>
+                        <li><a href="http://www.tiexue.net/">铁血网</a></li>
+                        <li><a href="http://kdnet.net/">凯迪社区</a></li>
+                        <li><a href="http://www.uzai.com/">旅游</a></li>
+                        <li><a href="http://www.jiancai365.cn/">中国建材网</a></li>
+                        <li><a href="http://house.china.com.cn/">北京房产网</a></li>
+                        <li><a href="http://www.taofw.cn/">淘房网二手房</a></li>
+                        <li><a href="http://www.tuniu.com/">途牛旅游网</a></li>
+                        <li><a href="http://www.hc360.com/">慧聪网</a></li>
+                        <li><a href="http://www.17u.com/">一起游</a></li>
+                        <li><a href="http://www.edushi.com/">e都市</a></li>
+                        <li><a href="http://www.docin.com/">豆丁网</a></li>
+                        <li><a href="http://www.wealink.com/">找工作</a></li>
+                        <li><a href="http://www.boosj.com/">播视网</a></li>
+                        <li><a href="http://www.525j.com.cn/">装修</a></li>
+                        <li><a href="http://www.17u.cn/">旅游网</a></li>
+                        <li><a href="http://www.buildjob.net/">建筑人才网</a></li>
+                        <li><a href="http://www.chinaiiss.com/">战略军事网</a></li>
+                        <li><a href="http://www.51hejia.com/">装修网</a></li>
+                        <li><a href="http://www.thethirdmedia.com/">第三媒体</a></li>
+                        <li><a href="http://www.wjw.cn/">全球五金网</a></li>
+                        <li><a href="http://www.gqsoso.com/">钢铁</a></li>
+                        <li><a href="http://ch.gongchang.com/">世界工厂网</a></li>
+                        <li><a href="http://www.jobui.com/">找工作</a></li>
+                        <li><a href="http://china.findlaw.cn/">法律咨询</a></li>
+                        <li><a href="http://www.net114.com/">网络114</a></li>
+                        <li><a href="http://www.china-designer.com/">设计师家园</a></li>
+                        <li><a href="http://www.epun.cn/">中国环保网</a></li>
+                        <li><a href="http://www.8264.com/">户外运动</a></li>
+                        <li><a href="http://www.youbian.com/">邮编查询网</a></li>
+                        <li><a href="http://www.lietou.com/">找工作</a></li>
+                        <li><a href="http://www.3lian.com/">3lian素材</a></li>
+                        <li><a href="http://www.keyunzhan.com/">长途汽车查询</a></li>
+                        <li><a href="http://www.egou.com/">返利网</a></li>
+                        <li><a href="http://www.265.com/">网址导航</a></li>
+                        <li><a href="http://house.online.sh.cn/">上海热线房产</a></li>
+                        <li><a href="http://www.chinabidding.org.cn/">政府采购网</a></li>
+                        <li><a href="http://bbs1.people.com.cn/">强国社区</a></li>
+                    </ul>
+                </div>
+
+                <div style="clear: left;"></div>
+                <div id="topic" style="text-align: center; padding-top: 8px; border-top: 1px #E0E0E0 solid">
+                    <span class="link_span"><a href="#" rel="nofollow">关于我们</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">媒体报道</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">人才招聘</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">联系我们</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">用户协议</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">使用帮助</a></span>|
+                <span class="link_span"><a href="#" rel="nofollow">友情链接</a></span>|
+                <span class="link_span"><a href="#">网站地图</a></span>|
+                <span class="link_span"><a href="javascript:;" id="show_city_list" rel="nofollow">其它城市</a></span>|
+                <span class="link_span"><a href="#">最新房源</a></span>|
+                <span class="link_span"><a href="#">最新问答</a></span>|
+                <span class="link_span"><a href="#" target="_blank" rel="nofollow">放心搜</a></span>
+                </div>
+                <div style="clear: left;"></div>
+                <div id="city_list" style="display: none;">
+                    <ul>
+                        <li><a href="#">秦皇岛二手房</a></li>
+                        <li><a href="#">呼和浩特二手房</a></li>
+                    </ul>
+                </div>
+                <div class="bottom_div">
+                    <div class="bottom_span">
+                        客服热线：400-620-9008&nbsp;&nbsp;&nbsp;&nbsp;
+                    邮箱：<a href="mailto:service@anjuke.com" target="_blank" rel="nofollow">
+                        <img src="./index2_files/email.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    虚假信息举报：400-620-9008
+                    </div>
+                    <div class="bottom_span2">
+                        Copyright © 2007-2012 www.sse.tongji.edu.cn  All Rights Reserved 
+                        <a href="http://www.miibeian.gov.cn/" rel="nofollow">ICP号：沪&nbsp;B2-20090008</a>
+                    </div>
+                </div>
+                <div style="height: 50px; clear: left;"></div>
+            </div>
+        </div>
+    </form>
+    <script src="../js/jquery-1.4.2.min.js"></script>
+    <script src="../js/zzzswitch.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+#zzbox {
+    display: none;
+    position: absolute;
+    top: 26px;
+    border: 1px solid;
+    width: 150px;
+
+}
+#zzbutton {
+
+}
+.zzab {
+    height: 26px;
+    line-height: 26px;
+    position: relative;
+    float: right;
+    top: 0;
+}
+.zzab1 {
+    position: relative;
+    float: right;
+}
+.zzmessage {
+    padding:0px 10px;
+    background-image: url(../img/message1.jpg);
+    background-size: 100px 50px;
+}
+#zzremind {
+    width: 350px;
+    border: 1px solid #b9b9b9;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+    display: none;
+    clear: both;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 1px 1px 5px #ddd;
+}
+
+#zzremind .more {
+    text-align: center;
+    height: 31px;
+    line-height: 31px;
+    clear: both;
+    background: #f7f7f7;
+    margin-top: 2px;
+    border-top: 1px solid #c3c3c3;
+    box-shadow: 0px -1px 5px #ececec;
+}
+
+#zzremind p {
+    padding: 4px 5px 5px 8px;
+    margin: 0 1px;
+    line-height: 16px;
+    position: relative;
+}
+#zzremind p span  {
+    float: left;
+    width: 300px;
+}
+#zzremind h3 {
+    height: 29px;
+    line-height: 29px;
+    color: #333;
+    font-weight: bold;
+    padding: 0 9px;
+    border-bottom: 1px solid #e4e4e4;
+}
