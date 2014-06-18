@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -362,7 +362,7 @@ namespace HomeManagementSystem2
         //private 
         private List<HouseInfo> search_by_customer_condition()
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getCustomerExpression());
@@ -429,7 +429,7 @@ namespace HomeManagementSystem2
 
         private List<HouseInfo> search_by_condition()
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getExpression());
@@ -505,6 +505,8 @@ namespace HomeManagementSystem2
             condition = condition.And(m => m.address1.area==customer_search_val || m.address1.city==customer_search_val
                 || m.address1.community == customer_search_val || m.decoration == customer_search_val
                 || m.title == customer_search_val || m.types == customer_search_val || m.salehouse.developer == customer_search_val);
+            //
+            Console.WriteLine(condition.Name);
             return condition;
         }
          public Expression<Func<house, bool>> getExpression()

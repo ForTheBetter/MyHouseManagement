@@ -61,7 +61,7 @@ namespace HomeManagementSystem2
             Session["Wei"] = A_Wei;
             Session["Mianji"] = A_Mianji;
             Session["Jiage"] = A_Jiage;
-           Server.Transfer("SellHouse_second.aspx");
+            Server.Transfer("SellHouse_second.aspx");
         }
 
    

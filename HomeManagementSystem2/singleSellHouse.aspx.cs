@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -12,7 +13,7 @@ namespace HomeManagementSystem2
         house House = new house();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             if (Request.QueryString.Get("id") != null)
             {
                 int house_id = int.Parse(Request.QueryString.Get("id"));
@@ -22,7 +23,7 @@ namespace HomeManagementSystem2
 
         protected void Txt_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             if (Request.QueryString.Get("id") != null)
             {
                 string ihtml = "";
@@ -68,12 +69,15 @@ namespace HomeManagementSystem2
                     agentIcon.ImageUrl = "showimg.aspx?AgentId=" + ag.person.agent.person_id;
                 }*/
                 agent ag = dc.agent.FirstOrDefault(a => a.person_id == dc.@delegate.FirstOrDefault(s => s.house == hid).agent);
-                agentName.Text = Server.HtmlEncode(ag.person.names);
-                tradeCnt.Text = Server.HtmlEncode(ag.person.agent.trade_number.ToString());
-                regDate.Text = Server.HtmlEncode(ag.person.agent.register_date.ToString());
-                profession.Text = Server.HtmlEncode(ag.person.agent.profession);
-                phoneTxt.Text = Server.HtmlEncode(ag.person.phone);
-                agentIcon.ImageUrl = "showimg.aspx?AgentId=" + ag.person.agent.person_id;
+                if (ag != null)
+                {
+                    agentName.Text = Server.HtmlEncode(ag.person.names);
+                    tradeCnt.Text = Server.HtmlEncode(ag.person.agent.trade_number.ToString());
+                    regDate.Text = Server.HtmlEncode(ag.person.agent.register_date.ToString());
+                    profession.Text = Server.HtmlEncode(ag.person.agent.profession);
+                    phoneTxt.Text = Server.HtmlEncode(ag.person.phone);
+                    agentIcon.ImageUrl = "showimg.aspx?AgentId=" + ag.person.agent.person_id;
+                }
             }
         }
     }

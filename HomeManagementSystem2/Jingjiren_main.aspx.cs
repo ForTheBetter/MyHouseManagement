@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.IO;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -17,39 +18,39 @@ namespace HomeManagementSystem2
             Yonghuming.Text = p.email;
             Xingming.Text = p.names;
             Image1.ImageUrl = "showimg.aspx?AgentId=" + p.person_id;
-            agent a = Commons.findAgentByPersonId(p.person_id);
+            agent a = HMS_DBProcessor.Commons.findAgentByPersonId(p.person_id);
             Jiaoyishu.Text = a.trade_number.ToString();
 
-            DataList1.DataSource = Commons.findAllDelegatesSmallDetailByAgentId(p.person_id);
+            DataList1.DataSource = HMS_DBProcessor.Commons.findAllDelegatesSmallDetailByAgentId(p.person_id);
             if (DataList1.DataSource == null)
-                DataList1.DataSource = Commons.getAnEmptyRentManageSource(p.person_id);
+                DataList1.DataSource = HMS_DBProcessor.Commons.getAnEmptyRentManageSource(p.person_id);
           
             DataList1.DataKeyField = "HouseId";
             DataList1.DataBind();
 
-            DataList2.DataSource = Commons.findAllRentDelegatesSmallDetailByAgentId(p.person_id);
+            DataList2.DataSource = HMS_DBProcessor.Commons.findAllRentDelegatesSmallDetailByAgentId(p.person_id);
             if (DataList2.DataSource == null)
-                DataList2.DataSource = Commons.getAnEmptyRentManageSource(p.person_id);
+                DataList2.DataSource = HMS_DBProcessor.Commons.getAnEmptyRentManageSource(p.person_id);
           
             DataList2.DataKeyField = "HouseId";
             DataList2.DataBind();
 
-            DataList3.DataSource = Commons.findAllSaleManageByAgentId(p.person_id);
-            if (Commons.getSaleManageCountByPersonId(p.person_id) == 0)
-             DataList3.DataSource = Commons.getAnEmptySaleManageSource(p.person_id);
+            DataList3.DataSource = HMS_DBProcessor.Commons.findAllSaleManageByAgentId(p.person_id);
+            if (HMS_DBProcessor.Commons.getSaleManageCountByPersonId(p.person_id) == 0)
+                DataList3.DataSource = HMS_DBProcessor.Commons.getAnEmptySaleManageSource(p.person_id);
           
             DataList3.DataKeyField = "HouseId";
             DataList3.DataBind();
-           
-            DataList4.DataSource = Commons.findAllRentManageByAgentId(p.person_id);
-            if (Commons.getRentManageCountByPersonId(p.person_id) == 0)
-                DataList4.DataSource = Commons.getAnEmptyRentManageSource(p.person_id);
+
+            DataList4.DataSource = HMS_DBProcessor.Commons.findAllRentManageByAgentId(p.person_id);
+            if (HMS_DBProcessor.Commons.getRentManageCountByPersonId(p.person_id) == 0)
+                DataList4.DataSource = HMS_DBProcessor.Commons.getAnEmptyRentManageSource(p.person_id);
           
             DataList4.DataKeyField = "HouseId";
             DataList4.DataBind();
 
-            DelegateCount.Text = Commons.getSaleManageCountByPersonId(((person)(Session["Agent"])).person_id).ToString();
-            DelegateCount0.Text = Commons.getRentManageCountByPersonId(((person)(Session["Agent"])).person_id).ToString();
+            DelegateCount.Text = HMS_DBProcessor.Commons.getSaleManageCountByPersonId(((person)(Session["Agent"])).person_id).ToString();
+            DelegateCount0.Text = HMS_DBProcessor.Commons.getRentManageCountByPersonId(((person)(Session["Agent"])).person_id).ToString();
 
         }
 

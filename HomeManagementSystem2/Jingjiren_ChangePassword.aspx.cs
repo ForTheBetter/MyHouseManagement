@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -25,7 +26,7 @@ namespace HomeManagementSystem2
               
             string old_pass = Old.Text;
             string new_pass = NewPass.Text;
-            Commons.changePassword(old_pass, new_pass, ((person)(Session["Agent"])).person_id);
+            HMS_DBProcessor.Commons.changePassword(old_pass, new_pass, ((person)(Session["Agent"])).person_id);
             System.Web.UI.Page page = (System.Web.UI.Page)System.Web.HttpContext.Current.Handler;
 
             if (!page.ClientScript.IsClientScriptBlockRegistered(page.GetType(), "clientScript"))

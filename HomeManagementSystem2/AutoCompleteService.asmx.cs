@@ -21,7 +21,7 @@ namespace HomeManagementSystem2
         [System.Web.Script.Services.ScriptMethod]
         public string[] GetSearchTerms(string prefixText,int count)
         {
-           return  Commons.getTopNCommunitiesByPrefix(prefixText, count);
+            return HMS_DBProcessor.Commons.getTopNCommunitiesByPrefix(prefixText, count);
         }
     }
 }

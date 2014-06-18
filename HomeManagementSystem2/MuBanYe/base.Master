@@ -70,7 +70,7 @@
                                 <li class="fangyuan"><a id="zzzz3" href="NewHouse.aspx" title="新房信息" _soj="navigation"><span>新 房</span></a></li>
                                 <li class="fangyuan"><a id="zzzz4" href="search_result_rent.aspx" title="租房信息" _soj="navigation"><span>租房</span></a></li>
                                 <li class="fangyuan"><a id="zzzz5" href="SellHouse_first.aspx" title="我要卖房" _soj="navigation"  ><span>我要卖房</span></a></li>
-                                <li class="rental nav_last"><a id="zzzz6" href="hirePage.aspx" title="我要出租" target="_blank" _soj="navigation"><span>我要出租</span></a></li>
+                                <li class="rental nav_last"><a id="zzzz6" href="hirePage.aspx" title="我要出租" _soj="navigation"><span>我要出租</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -90,26 +90,26 @@
                         <ul class="clearfix">
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="info0" runat="server" Text="aa"></asp:Label></em>
-                                    <span><asp:Label ID="infocontent0" runat="server" Text="aa"></asp:Label></span>
+                                    <em><asp:Label ID="info0" runat="server" Text="注意"></asp:Label></em>
+                                    <span><asp:Label ID="infocontent0" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="info1" runat="server" Text="aa"></asp:Label></em>
-                                    <span><asp:Label ID="infocontent1" runat="server" Text="aa"></asp:Label></span>
+                                    <em><asp:Label ID="Label1" runat="server" Text="注意"></asp:Label></em>
+                                    <span><asp:Label ID="Label2" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="info2" runat="server" Text="aa"></asp:Label></em>
-                                    <span><asp:Label ID="infocontent2" runat="server" Text="aa"></asp:Label></span>
+                                    <em><asp:Label ID="Label3" runat="server" Text="注意"></asp:Label></em>
+                                    <span><asp:Label ID="Label4" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="info3" runat="server" Text="aa"></asp:Label></em>
-                                    <span><asp:Label ID="infocontent3" runat="server" Text="aa"></asp:Label></span>
+                                    <em><asp:Label ID="Label5" runat="server" Text="注意"></asp:Label></em>
+                                    <span><asp:Label ID="Label6" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
                                 </a>
                             </li>
                         </ul>
@@ -219,8 +219,8 @@
                 <div class="bottom_div">
                     <div class="bottom_span">
                         客服热线：400-620-9008&nbsp;&nbsp;&nbsp;&nbsp;
-                    邮箱：<a href="mailto:service@anjuke.com" target="_blank" rel="nofollow">
-                        <img src="./index2_files/email.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    邮箱：<a href="570010155@qq.com" target="_blank" rel="nofollow">
+                        570010155@qq.com</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     虚假信息举报：400-620-9008
                     </div>
                     <div class="bottom_span2">

@@ -7,11 +7,11 @@
     <link href="css/Wrapper.css" rel="stylesheet" type="text/css" />
     <link href="css/Button.css" rel="stylesheet" type="text/css" />
     <link href="css/Label.css" rel="stylesheet" type="text/css" />
-     <link href="css/Textbox.css" rel="stylesheet" type="text/css" />
+    <link href="css/Textbox.css" rel="stylesheet" type="text/css" />
     <title>我要卖房</title>
     <style>
         .center {
-            margin:0px auto;
+            margin: 0px auto;
         }
     </style>
     <script>
@@ -25,10 +25,10 @@
             }
         }
         function CheckXiaoquName() {
-          
+
             createXMLHttpRequest();
             var XiaoquName = document.getElementById("Xiaoqu").value;
-          
+
             var url = "Validator.ashx?Xiaoquming=" + XiaoquName;
             xmlHttp.open("GET", url, true);
             //alert("The readyState is" + xmlHttp.readyState + " Status is" +  xmlHttp.status);
@@ -37,7 +37,7 @@
         }
 
         function ShowResult() {
-        
+
             if (xmlHttp.readyState == 4) {
                 if (xmlHttp.status == 200) {
                     var ret = xmlHttp.responseText;
@@ -56,7 +56,7 @@
             }
 
         }
-    </script> 
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

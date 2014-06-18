@@ -39,7 +39,7 @@ namespace HomeManagementSystem2
 
         public bool isXiaoquExist(string name)
         {
-            return Commons.judgeIfXiaoqumingExsit(name);
+            return HMS_DBProcessor.Commons.judgeIfXiaoqumingExsit(name);
         }
       
     }

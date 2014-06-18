@@ -50,6 +50,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\www.NewXing.com\AutoCompleteExtra.dll</HintPath>
     </Reference>
+    <Reference Include="HMS_DataEntity">
+      <HintPath>..\..\HMS_DataEntity\bin\Debug\HMS_DataEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="HMS_DBProcessor">
+      <HintPath>..\..\HMS_DBProcessor\bin\Debug\HMS_DBProcessor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -125,7 +131,6 @@
     <Content Include="js\zzzswitch.js" />
     <Content Include="login.aspx" />
     <Content Include="NewHouse.aspx" />
-    <Content Include="Oldhouse.aspx" />
     <Content Include="postRequirement.htm" />
     <Content Include="Resources\10.jpg" />
     <Content Include="Resources\1121.jpg" />
@@ -165,7 +170,6 @@
       <DependentUpon>AutoCompleteService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Commons.cs" />
     <Compile Include="hirePage.aspx.cs">
       <DependentUpon>hirePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,11 +204,6 @@
     </Compile>
     <Compile Include="index3.aspx.designer.cs">
       <DependentUpon>index3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs" />
     <Compile Include="Jingjiren_ChangePassword.aspx.cs">
@@ -256,26 +255,12 @@
     <Compile Include="MuBanYe\base.Master.designer.cs">
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
-    <Compile Include="MuBanYe\MuBan.Master.cs">
-      <DependentUpon>MuBan.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MuBanYe\MuBan.Master.designer.cs">
-      <DependentUpon>MuBan.Master</DependentUpon>
-    </Compile>
     <Compile Include="NewHouse.aspx.cs">
       <DependentUpon>NewHouse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NewHouse.aspx.designer.cs">
       <DependentUpon>NewHouse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Oldhouse.aspx.cs">
-      <DependentUpon>Oldhouse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Oldhouse.aspx.designer.cs">
-      <DependentUpon>Oldhouse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="search_result_rent.aspx.cs">
@@ -346,12 +331,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MuBanYe\MuBan.Master" />
-    <Content Include="DataClasses1.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Validator.ashx" />
     <Content Include="MuBanYe\base.Master" />
     <None Include="Web.Debug.config">
@@ -366,9 +345,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="Global.asax.resx">
       <DependentUpon>Global.asax.cs</DependentUpon>
     </EmbeddedResource>

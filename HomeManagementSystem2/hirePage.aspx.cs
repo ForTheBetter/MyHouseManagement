@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -29,7 +30,7 @@ namespace HomeManagementSystem2
 
         protected void Button_Next_Click(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             community = TextBox1.Text;
             hireCost = int.Parse(TextBox7.Text);
             roomCnt = int.Parse(TextBox2.Text);

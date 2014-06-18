@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -11,7 +12,7 @@ namespace HomeManagementSystem2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             if(Request.QueryString.Get("id") != null)
             {
                 int house_id = int.Parse(Request.QueryString.Get("id"));
@@ -31,7 +32,7 @@ namespace HomeManagementSystem2
             if (Request.QueryString.Get("HouseId") != null)
             {
                 int house_id = int.Parse(Request.QueryString.Get("HouseId"));
-                house h = dc.house.FirstOrDefault(a=>a.house_id == house_id);
+                house h = dc.house.FirstOrDefault(a => a.house_id == house_id);
                 Response.ContentType = "image/jpg";
                 Response.BinaryWrite(h.thumbnails.ToArray());
                 Response.End();

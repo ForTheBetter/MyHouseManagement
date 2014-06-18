@@ -26,7 +26,7 @@ namespace HomeManagementSystem2
             //            where p.person_id == a.person_id
             //            select new { name = p.names, profession = a.profession, register_date = a.register_date, trade_number = a.trade_number };
             //GridView1.DataSource = query;
-            GridView1.DataSource = Commons.findAllAgents();
+            GridView1.DataSource = HMS_DBProcessor.Commons.findAllAgents();
 
             GridView1.DataKeyNames = new string[] { "person_id" };
             GridView1.DataSourceID = null;

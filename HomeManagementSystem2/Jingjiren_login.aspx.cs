@@ -19,9 +19,9 @@ namespace HomeManagementSystem2
             string account = TB_Log_AgentAccount.Text;
             string password = TB_Log_AgentPassword.Text;
 
-            if (Commons.judgeAgentByAgentAccountAndPassword(account, password))
+            if (HMS_DBProcessor.Commons.judgeAgentByAgentAccountAndPassword(account, password))
             {
-                Session["Agent"] = Commons.findPersonByEmail(account);
+                Session["Agent"] = HMS_DBProcessor.Commons.findPersonByEmail(account);
                 Response.Redirect("Jingjiren_main.aspx");
             }
             else

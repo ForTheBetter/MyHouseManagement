@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -13,7 +14,7 @@ namespace HomeManagementSystem2
         {
             int house_id = Convert.ToInt32(Request.QueryString["houseid"].ToString());
             int person_id = ((person)(Session["Agent"])).person_id;
-            Dictionary<string, string> d = Commons.findAllRentHouseInformationByAgentIdAndHouseId(person_id, house_id);
+            Dictionary<string, string> d = HMS_DBProcessor.Commons.findAllRentHouseInformationByAgentIdAndHouseId(person_id, house_id);
             a_city.Text = d["a*city"];
             a_area.Text = d["a*area"];
             a_street.Text = d["a*street"];
@@ -34,7 +35,7 @@ namespace HomeManagementSystem2
             s_description.Text = d["r*description"];
             de_messages.Text = d["de*messages"];
             Image1.ImageUrl = "showimg.aspx?HouseId=" + house_id;
-            string[] allPhotos = Commons.getAllSaleHousePicturesByHouseId(house_id);
+            string[] allPhotos = HMS_DBProcessor.Commons.getAllSaleHousePicturesByHouseId(house_id);
             foreach (string s in allPhotos)
             {
                 ImageGallery.InnerHtml
@@ -46,14 +47,14 @@ namespace HomeManagementSystem2
         protected void Accept_Click(object sender, EventArgs e)
         {
             int house_id = Convert.ToInt32(Request.QueryString["houseid"].ToString());
-            Commons.setDelegateStatusToAgree(house_id);
+            HMS_DBProcessor.Commons.setDelegateStatusToAgree(house_id);
             Response.Redirect("Jingjiren_main.aspx");
         }
 
         protected void Reject_Click(object sender, EventArgs e)
         {
             int house_id = Convert.ToInt32(Request.QueryString["houseid"].ToString());
-            Commons.setDelegateStatusToRefuse(house_id);
+            HMS_DBProcessor.Commons.setDelegateStatusToRefuse(house_id);
             Response.Redirect("Jingjiren_main.aspx");
         }
     }

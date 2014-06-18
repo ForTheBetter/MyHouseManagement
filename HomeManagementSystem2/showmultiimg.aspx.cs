@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -11,7 +12,7 @@ namespace HomeManagementSystem2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             if (Request.QueryString.Get("house_id") != null)
             {
                 int house_id = int.Parse(Request.QueryString.Get("house_id"));

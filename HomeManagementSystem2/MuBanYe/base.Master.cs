@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -68,7 +69,7 @@ namespace HomeManagementSystem2
                 }
                 else
                 {
-                    DataClasses1DataContext dc = new DataClasses1DataContext();
+                    HMS_DBDataContext dc = new HMS_DBDataContext();
                     please1.Text = "欢迎,";
                     zzHyperLink.Text = p.names;
                     zzHyperLink.NavigateUrl = "#";
@@ -90,7 +91,7 @@ namespace HomeManagementSystem2
 
         protected void delete_dg(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             person p = (person)Session["Person"];
             System.Linq.IQueryable<@delegate> dt = dc.@delegate.Where(a => a.member == p.person_id && (a.state == "refuse" || a.state == "agree"));
             @delegate[] da = dt.ToArray();

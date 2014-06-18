@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using HMS_DataEntity;
+
 namespace HomeManagementSystem2
 {
     public partial class SellHouse_third : System.Web.UI.Page
@@ -13,7 +15,7 @@ namespace HomeManagementSystem2
         {
          
             int id = Convert.ToInt32(Request.QueryString["person"]);
-            NameOfJingjiren.Text = "经纪人:" + Commons.findAgentNameByAgentId(id);
+            NameOfJingjiren.Text = "经纪人:" + HMS_DBProcessor.Commons.findAgentNameByAgentId(id);
          }
 
 
@@ -58,7 +60,7 @@ namespace HomeManagementSystem2
                 Session["Description"] = Description.Text;
 
                 house h = new house();
-                h.address = Commons.findCommunityByCommunityName((string)Session["Xiaoqu"]).address_id;
+                h.address = HMS_DBProcessor.Commons.findCommunityByCommunityName((string)Session["Xiaoqu"]).address_id;
                 h.levels = (string)Session["Louceng"];
                 h.title = (string)(Session["Biaoti"]);
                 h.area = Int32.Parse((string)Session["Mianji"]);
@@ -75,7 +77,7 @@ namespace HomeManagementSystem2
                 Stream StreamObject = upfile.InputStream;
                 StreamObject.Read(FileByteArray, 0, length);
                 h.thumbnails = FileByteArray;
-          
+
                 salehouse s = new salehouse();
                 s.types = (string)Session["Shiyongqingkuang"];
                 s.price = Int32.Parse((string)Session["Jiage"]);
@@ -85,7 +87,7 @@ namespace HomeManagementSystem2
                 s.house = h;
                 s.build_date = DateTime.Now;
 
-                HomeManagementSystem2.@delegate d = new HomeManagementSystem2.@delegate();
+                @delegate d = new @delegate();
                 d.member = ((person)Session["Person"]).person_id;
                 
                 
@@ -95,7 +97,7 @@ namespace HomeManagementSystem2
                 d.messages = "hey you ";
                 d.state = "pending";
                 
-                Commons.insertOneIntoSaleHouseAndDelegate(s, d);
+                HMS_DBProcessor.Commons.insertOneIntoSaleHouseAndDelegate(s, d);
                 Response.Redirect("SellHouse_forth.aspx");
             
             

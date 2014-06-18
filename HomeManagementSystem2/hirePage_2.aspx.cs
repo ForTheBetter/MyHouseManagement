@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -29,8 +30,8 @@ namespace HomeManagementSystem2
         {
             if (CheckBox1.Checked)
             {
-                DataClasses1DataContext dc1 = new DataClasses1DataContext();
-                DataClasses1DataContext dc = new DataClasses1DataContext();
+                HMS_DBDataContext dc1 = new HMS_DBDataContext();
+                HMS_DBDataContext dc = new HMS_DBDataContext();
                 int agid = int.Parse(Request.QueryString.Get("person"));
                 Application.Lock();
                 house House = (house)Application["house"];
@@ -45,12 +46,12 @@ namespace HomeManagementSystem2
                     payment = hireCost,
                     description = TextBox2.Text,
                 };
-                HomeManagementSystem2.@delegate dg = new HomeManagementSystem2.@delegate();
+                @delegate dg = new @delegate();
                 dg.member = ((person)Session["Person"]).person_id;
                 dg.agent = Convert.ToInt32(Request.QueryString["person"]);
                 dg.house1 = House;
                 dg.date = DateTime.Now;
-                dg.messages = "fuck you ";
+                dg.messages = "hey you ";
                 dg.state = "pending";
 
                 House.title = TextBox1.Text;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -41,10 +42,10 @@ namespace HomeManagementSystem2
                     Uploadtips.Text = serverpath;
                     
                     FileUpload1.PostedFile.SaveAs(serverpath);
-                    Commons.addOnePhotoToPhotos(filename,((person)(Session["Person"])).person_id);
+                    HMS_DBProcessor.Commons.addOnePhotoToPhotos(filename, ((person)(Session["Person"])).person_id);
                     Uploadtips.Text = "上传成功,再接在励，再上传几张吧";
-                    
-                    List<string> photoList = Commons.getLastHouseAllPhotosByPersonId(((person)(Session["Person"])).person_id);
+
+                    List<string> photoList = HMS_DBProcessor.Commons.getLastHouseAllPhotosByPersonId(((person)(Session["Person"])).person_id);
                     string ihtml = "";
                     foreach (string s in photoList)
                     {
@@ -58,7 +59,7 @@ namespace HomeManagementSystem2
         protected void Button1_Click(object sender, EventArgs e)
         {
            string message = LeaveMessage.Text;
-           Commons.setDelegateMessages(message,Commons.getLastDelegateByPersonId(((person)(Session["Person"])).person_id));
+           HMS_DBProcessor.Commons.setDelegateMessages(message, HMS_DBProcessor.Commons.getLastDelegateByPersonId(((person)(Session["Person"])).person_id));
            System.Web.UI.Page page = (System.Web.UI.Page)System.Web.HttpContext.Current.Handler;
            if (!page.ClientScript.IsClientScriptBlockRegistered(page.GetType(), "clientScript"))
                page.ClientScript.RegisterClientScriptBlock(page.GetType(),

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2
 {
@@ -32,10 +33,10 @@ namespace HomeManagementSystem2
                 Uploadtips.Text = serverpath;
                 
                 FileUpload1.PostedFile.SaveAs(serverpath);
-                Commons.addOnePhotoToPhotos(filename, ((person)(Session["Person"])).person_id);
+                HMS_DBProcessor.Commons.addOnePhotoToPhotos(filename, ((person)(Session["Person"])).person_id);
                 Uploadtips.Text = "上传成功,再接在励，再上传几张吧";
 
-                List<string> photoList = Commons.getLastHouseAllPhotosByPersonId(((person)(Session["Person"])).person_id);
+                List<string> photoList = HMS_DBProcessor.Commons.getLastHouseAllPhotosByPersonId(((person)(Session["Person"])).person_id);
                 string ihtml = "";
                 foreach (string s in photoList)
                 {

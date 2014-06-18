@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HMS_DataEntity;
 
 namespace HomeManagementSystem2.rent
 {
@@ -302,7 +303,7 @@ namespace HomeManagementSystem2.rent
 
         private List<HouseInfo> search_by_condition()
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getSearchExpression());
@@ -337,14 +338,14 @@ namespace HomeManagementSystem2.rent
 
         private List<HouseInfo> search_by_condition(String input)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
+            HMS_DBDataContext dc = new HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getSearchExpression(input));
             foreach (var Items in result)
             {
                 // @delegate result1=dc.@delegate.FirstOrDefault(n=>n.house==Items.house_id);
-               
+
                 manage temp = dc.manage.FirstOrDefault(n => n.house == Items.house_id);
                 if (temp != null)
                 {
