@@ -35,7 +35,7 @@
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:fcglConnectionString %>" SelectCommand="SELECT house.address, house.room, house.hall, house.toilet, house.area, renthouse.payment FROM house INNER JOIN renthouse ON house.house_id = renthouse.house_id"></asp:SqlDataSource>
     
     <div class="searchBar" id="searchBar">
-            <div class="search-area" action="#" method="GET">
+            <!--<div class="search-area" action="#" method="GET">
                 <form action="search_result_rent.aspx">
                     <div class="searchinput" id="home_kw_div">
                         <input type="text" maxlength="100" autocomplete="off" name="k" id="home_kw" value="请输入房源特征、户型、地址…" x-webkit-speech="" lang="zh-CN">
@@ -45,7 +45,8 @@
                     <input type="submit" value="找新房" id="home_kw_xinfang" class="find-button">
                 </form>
                 <input type="hidden" value="1" name="rd">
-            </div>
+            </div>-->
+            <div class="search-area"><h4>房屋中介管理系统</h4></div>
             <div class="filter-search">
             <div class="filter-sec">
             <h4>二手房</h4>

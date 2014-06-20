@@ -29,19 +29,19 @@ namespace HomeManagementSystem2
                 string ihtml = "";
                 foreach (var s in House.photo)
                 {
-                    ihtml += "<div class=\"pic\"><img  src='UploadedImage/" + s.picture + "'/></div>";
+                    ihtml += "<div class=\"pic\"><img  width='600px' height='500px' src='UploadedImage/" + s.picture + "'/></div>";
                 }
                 Image_Gallery.InnerHtml = ihtml;
 
                 int hid = int.Parse(Request.QueryString.Get("id"));
-                manage mana = dc.manage.FirstOrDefault(a => a.house == hid);
-                agent ag = dc.agent.FirstOrDefault(a => a.person_id == mana.agent);
+                //manage mana = dc.manage.FirstOrDefault(a => a.house == hid);
+                agent ag = dc.agent.FirstOrDefault(a => a.person_id == 3);
                 agentName.Text = Server.HtmlEncode(ag.person.names);
                 tradeCnt.Text = Server.HtmlEncode(ag.person.agent.trade_number.ToString());
                 regDate.Text = Server.HtmlEncode(ag.person.agent.register_date.ToString());
                 profession.Text = Server.HtmlEncode(ag.person.agent.profession);
                 phoneTxt.Text = Server.HtmlEncode(ag.person.phone);
-                agentIcon.ImageUrl = "showimg.aspx?AgentId=" + ag.person.agent.person_id;
+                agentIcon.ImageUrl = "showimg.aspx?AgentId=" + 3;
                 Label2.Text = Server.HtmlEncode(House.address1.city);
                 Label3.Text = Server.HtmlEncode(House.address1.area);
                 Label4.Text = Server.HtmlEncode(House.address1.community);

@@ -310,9 +310,9 @@ namespace HomeManagementSystem2.rent
             foreach (var Items in result)
             {
                 manage temp = dc.manage.FirstOrDefault(n => n.house == Items.house_id);
-                if (temp != null)
+                //if (temp != null)
                 {
-                    person result1 = dc.person.FirstOrDefault(m => m.person_id == temp.agent);
+                    //person result1 = dc.person.FirstOrDefault(m => m.person_id == temp.agent);
                     HouseInfo houseInfo = new HouseInfo
                     {
                         House_id = Items.house_id,
@@ -325,7 +325,7 @@ namespace HomeManagementSystem2.rent
                         Level = Items.levels,
                         Decoration = Items.decoration,
                         PhotoCount = Items.photo.Count,
-                        AgentName = result1.names,
+                        AgentName = "林宜",
                         Room = (int)Items.room,
                         Hall = (int)Items.hall,
                     };

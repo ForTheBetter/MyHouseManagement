@@ -90,26 +90,26 @@
                         <ul class="clearfix">
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="info0" runat="server" Text="注意"></asp:Label></em>
-                                    <span><asp:Label ID="infocontent0" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
+                                    <em><asp:Label ID="info0" runat="server" Text="房产："></asp:Label></em>
+                                    <span><asp:Label ID="infocontent0" runat="server" Text=""></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="Label1" runat="server" Text="注意"></asp:Label></em>
-                                    <span><asp:Label ID="Label2" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
+                                    <em><asp:Label ID="Label1" runat="server" Text="房产："></asp:Label></em>
+                                    <span><asp:Label ID="Label2" runat="server" Text=""></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="Label3" runat="server" Text="注意"></asp:Label></em>
-                                    <span><asp:Label ID="Label4" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
+                                    <em><asp:Label ID="Label3" runat="server" Text="房产："></asp:Label></em>
+                                    <span><asp:Label ID="Label4" runat="server" Text=""></asp:Label></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" _soj="RNews" target="_blank">
-                                    <em><asp:Label ID="Label5" runat="server" Text="注意"></asp:Label></em>
-                                    <span><asp:Label ID="Label6" runat="server" Text="高端盘集中放量 沪楼市库存走高"></asp:Label></span>
+                                    <em><asp:Label ID="Label5" runat="server" Text="房产："></asp:Label></em>
+                                    <span><asp:Label ID="Label6" runat="server" Text=""></asp:Label></span>
                                 </a>
                             </li>
                         </ul>
@@ -150,47 +150,12 @@
                 <div class="partner">
                     <span>合作伙伴：</span>
                     <ul>
-                        <li><a href="http://www.kankanews.com/">看看新闻网</a></li>
-                        <li><a href="http://www.jfdaily.com/">解放牛网</a></li>
-                        <li><a href="http://www.daqi.com/">大旗网</a></li>
-                        <li><a href="http://www.taskcn.com/">威客网</a></li>
-                        <li><a href="http://www.tiexue.net/">铁血网</a></li>
-                        <li><a href="http://kdnet.net/">凯迪社区</a></li>
-                        <li><a href="http://www.uzai.com/">旅游</a></li>
-                        <li><a href="http://www.jiancai365.cn/">中国建材网</a></li>
-                        <li><a href="http://house.china.com.cn/">北京房产网</a></li>
-                        <li><a href="http://www.taofw.cn/">淘房网二手房</a></li>
-                        <li><a href="http://www.tuniu.com/">途牛旅游网</a></li>
-                        <li><a href="http://www.hc360.com/">慧聪网</a></li>
-                        <li><a href="http://www.17u.com/">一起游</a></li>
-                        <li><a href="http://www.edushi.com/">e都市</a></li>
-                        <li><a href="http://www.docin.com/">豆丁网</a></li>
-                        <li><a href="http://www.wealink.com/">找工作</a></li>
-                        <li><a href="http://www.boosj.com/">播视网</a></li>
-                        <li><a href="http://www.525j.com.cn/">装修</a></li>
-                        <li><a href="http://www.17u.cn/">旅游网</a></li>
-                        <li><a href="http://www.buildjob.net/">建筑人才网</a></li>
-                        <li><a href="http://www.chinaiiss.com/">战略军事网</a></li>
-                        <li><a href="http://www.51hejia.com/">装修网</a></li>
-                        <li><a href="http://www.thethirdmedia.com/">第三媒体</a></li>
-                        <li><a href="http://www.wjw.cn/">全球五金网</a></li>
-                        <li><a href="http://www.gqsoso.com/">钢铁</a></li>
-                        <li><a href="http://ch.gongchang.com/">世界工厂网</a></li>
-                        <li><a href="http://www.jobui.com/">找工作</a></li>
-                        <li><a href="http://china.findlaw.cn/">法律咨询</a></li>
-                        <li><a href="http://www.net114.com/">网络114</a></li>
-                        <li><a href="http://www.china-designer.com/">设计师家园</a></li>
-                        <li><a href="http://www.epun.cn/">中国环保网</a></li>
-                        <li><a href="http://www.8264.com/">户外运动</a></li>
-                        <li><a href="http://www.youbian.com/">邮编查询网</a></li>
-                        <li><a href="http://www.lietou.com/">找工作</a></li>
-                        <li><a href="http://www.3lian.com/">3lian素材</a></li>
-                        <li><a href="http://www.keyunzhan.com/">长途汽车查询</a></li>
-                        <li><a href="http://www.egou.com/">返利网</a></li>
-                        <li><a href="http://www.265.com/">网址导航</a></li>
-                        <li><a href="http://house.online.sh.cn/">上海热线房产</a></li>
-                        <li><a href="http://www.chinabidding.org.cn/">政府采购网</a></li>
-                        <li><a href="http://bbs1.people.com.cn/">强国社区</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
+                        <li><a href="http://www.sse.tongji.edu.cn/">同济软件学院</a></li>
                     </ul>
                 </div>
 
@@ -212,20 +177,20 @@
                 <div style="clear: left;"></div>
                 <div id="city_list" style="display: none;">
                     <ul>
-                        <li><a href="#">秦皇岛二手房</a></li>
-                        <li><a href="#">呼和浩特二手房</a></li>
+                        <li><a href="#">同济大学</a></li>
+                        <li><a href="#">同济大学</a></li>
                     </ul>
                 </div>
                 <div class="bottom_div">
                     <div class="bottom_span">
-                        客服热线：400-620-9008&nbsp;&nbsp;&nbsp;&nbsp;
+                        客服热线：110&nbsp;&nbsp;&nbsp;&nbsp;
                     邮箱：<a href="570010155@qq.com" target="_blank" rel="nofollow">
                         570010155@qq.com</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    虚假信息举报：400-620-9008
+                    虚假信息举报：110
                     </div>
                     <div class="bottom_span2">
                         Copyright © 2007-2012 www.sse.tongji.edu.cn  All Rights Reserved 
-                        <a href="http://www.miibeian.gov.cn/" rel="nofollow">ICP号：沪&nbsp;B2-20090008</a>
+                        <a href="#" rel="nofollow">ICP号：沪&nbsp;</a>
                     </div>
                 </div>
                 <div style="height: 50px; clear: left;"></div>

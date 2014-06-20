@@ -7,19 +7,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HMS_DataEntity;
-using System.Runtime.InteropServices;
+
 
 namespace HomeManagementSystem2
 {
-    public partial class NewHouse : System.Web.UI.Page
+    public partial class Oldhouse : System.Web.UI.Page
     {
-
-        [DllImport("HMS_SpecialFunc.dll", CallingConvention=CallingConvention.StdCall)]
-        unsafe static extern int* Price_Parse([MarshalAs(UnmanagedType.LPStr)]string search_condition_price);
-
-        [DllImport("HMS_SpecialFunc.dll")]
-        public static extern int RoomKind_Parse([MarshalAs(UnmanagedType.LPStr)]string search_condition_roomkind);
-
         public String myhtnl = "";
         public String price_search = "全部";
         public String area_search = "全部";
@@ -33,7 +26,7 @@ namespace HomeManagementSystem2
         public int search_function = 0;//0卫客观搜索，1为自定义搜索
         protected void Page_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("hello");
+
             if (Session["first_load"] == null)
             {
                 Session["money"] = price_search;
@@ -55,7 +48,6 @@ namespace HomeManagementSystem2
             my_current_page = Convert.ToInt32(Session["current_page"]);
             search_function = Convert.ToInt32(Session["search"]);
 
-            Console.WriteLine("hello");
             List<HouseInfo> hou_list = search_by_condition();
             show_total.InnerText = hou_list.Count.ToString();
             list.InnerHtml = sethtml(hou_list, 0);
@@ -66,11 +58,7 @@ namespace HomeManagementSystem2
             LinkButton a1 = (LinkButton)sender;
             int[] price = new int[2];
             price_search = a1.Text;
-            unsafe
-            {
-                price[0] = Price_Parse(price_search)[0];
-                price[1] = Price_Parse(price_search)[1];
-            }
+            price = Price_Parse(price_search);
             search_function = 0;
             Session["search"] = 0;
             Session["money"] = price_search;
@@ -375,7 +363,7 @@ namespace HomeManagementSystem2
         //private 
         private List<HouseInfo> search_by_customer_condition()
         {
-            HMS_DBDataContext dc = new HMS_DBDataContext();
+            HMS_DataEntity.HMS_DBDataContext dc = new HMS_DataEntity.HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getCustomerExpression());
@@ -410,36 +398,39 @@ namespace HomeManagementSystem2
             foreach (var Items in result)
             {
                 HouseInfo houseInfo = new HouseInfo
-                (
-                    Items.house_id,
-                    Items.salehouse.description,
-                    Items.address1.city,
-                    Items.address1.area,
-                    Items.address1.street,
-                    Items.address1.community,
-                    Items.levels,
-                    Convert.ToInt32(Items.room),
-                    Convert.ToInt32(Items.hall),
-                    Convert.ToInt32(Items.toilet),
-                    Items.area.ToString(),
-                    Items.types,
-                    Items.decoration,
-                    Items.member1.person.phone,
-                    Convert.ToInt32(Items.area == 0? 0:Items.salehouse.price * 10000 / Items.area),
-                    Items.salehouse.types
-                );
+                {
+                    photoId = Items.house_id,
+                    Description = Items.salehouse.description,
+
+                    city = Items.address1.city,
+                    local_Area = Items.address1.area,
+                    Street = Items.address1.street,
+                    Community = Items.address1.community,
+                    Level = Items.levels,
+
+                    Room = Convert.ToInt32(Items.room),
+                    Hall = Convert.ToInt32(Items.hall),
+                    Toilet = Convert.ToInt32(Items.toilet),
+                    Area = Items.area.ToString(),
+
+                    type = Items.types,
+                    Decoration = Items.decoration,
+
+                    phoneNum = Items.member1.person.phone,
+
+                    Price = Convert.ToInt32(Items.salehouse.price * 10000 / Items.area),
+
+                    new_oldhouse = Items.salehouse.types,
+                };
                 list.Add(houseInfo);
             }
             return list;
         }
 
-        class testing {
-            testing(int a, int b) { }
-        }
 
         private List<HouseInfo> search_by_condition()
         {
-            HMS_DBDataContext dc = new HMS_DBDataContext();
+            HMS_DataEntity.HMS_DBDataContext dc = new HMS_DataEntity.HMS_DBDataContext();
             List<HouseInfo> list = new List<HouseInfo>();
 
             var result = dc.house.Where(getExpression());
@@ -474,24 +465,30 @@ namespace HomeManagementSystem2
             foreach (var Items in result)
             {
                 HouseInfo houseInfo = new HouseInfo
-                (
-                    Items.house_id,
-                    Items.salehouse.description,
-                    Items.address1.city,
-                    Items.address1.area,
-                    Items.address1.street,
-                    Items.address1.community,
-                    Items.levels,
-                    Convert.ToInt32(Items.room),
-                    Convert.ToInt32(Items.hall),
-                    Convert.ToInt32(Items.toilet),
-                    Items.area.ToString(),
-                    Items.types,
-                    Items.decoration,
-                    Items.member1.person.phone,
-                    Items.area == 0 ? 0 : Convert.ToInt32(Items.area==0?0:Items.salehouse.price * 10000 / Items.area),
-                    Items.salehouse.types
-                );
+                {
+                    photoId = Items.house_id,
+                    Description = Items.salehouse.description,
+
+                    city = Items.address1.city,
+                    local_Area = Items.address1.area,
+                    Street = Items.address1.street,
+                    Community = Items.address1.community,
+                    Level = Items.levels,
+
+                    Room = Convert.ToInt32(Items.room),
+                    Hall = Convert.ToInt32(Items.hall),
+                    Toilet = Convert.ToInt32(Items.toilet),
+                    Area = Items.area.ToString(),
+
+                    type = Items.types,
+                    Decoration = Items.decoration,
+
+                    phoneNum = Items.member1.person.phone,
+
+                    Price = Convert.ToInt32(Items.salehouse.price * 10000 / Items.area),
+
+                    new_oldhouse = Items.salehouse.types,
+                };
                 list.Add(houseInfo);
             }
             // show.InnerText = "price_search";
@@ -504,21 +501,19 @@ namespace HomeManagementSystem2
         public Expression<Func<house, bool>> getCustomerExpression()
         {
             Expression<Func<house, bool>> condition = PredicateExtensions.True<house>();
-            condition = condition.And(m => m.types != "老公房" && m.types != "酒店");
-            condition = condition.And(m => m.salehouse.types == "新房");
+            condition = condition.And(m => m.types != "酒店");
+            condition = condition.And(m => m.salehouse.types != "新房");
             condition = condition.And(m => m.address1.area == customer_search_val || m.address1.city == customer_search_val
                 || m.address1.community == customer_search_val || m.decoration == customer_search_val
                 || m.title == customer_search_val || m.types == customer_search_val || m.salehouse.developer == customer_search_val);
-            //
-            Console.WriteLine(condition.Name);
             return condition;
         }
         public Expression<Func<house, bool>> getExpression()
         {
             Expression<Func<house, bool>> condition = PredicateExtensions.True<house>();
 
-            condition = condition.And(m => m.types != "老公房" && m.types != "酒店");
-            condition = condition.And(m => m.salehouse.types == "新房");
+            condition = condition.And(m => m.types != "酒店");
+            condition = condition.And(m => m.salehouse.types != "新房");
             //search_area
             String my_area = area_search;
             //String my_area= Convert.ToString(Session["area"]);
@@ -528,21 +523,16 @@ namespace HomeManagementSystem2
             }
 
             //根据价格搜索
-            unsafe
+            int[] price_range = Price_Parse(price_search);
+            if (price_range[1] == -1)
             {
-                int[] price_range = new int[2];
-                price_range[0] = Price_Parse(price_search)[0];
-                price_range[1] = Price_Parse(price_search)[1];
-                if (price_range[1] == -1)
-                {
-                    condition = condition.And(m => m.salehouse.price >= price_range[0]);
-                }
+                condition = condition.And(m => m.salehouse.price >= price_range[0]);
+            }
 
-                if (price_range[1] != -1)
-                {
-                    condition = condition.And(m => m.salehouse.price >= price_range[0]);
-                    condition = condition.And(m => m.salehouse.price < price_range[1]);
-                }
+            if (price_range[1] != -1)
+            {
+                condition = condition.And(m => m.salehouse.price >= price_range[0]);
+                condition = condition.And(m => m.salehouse.price < price_range[1]);
             }
             //根据房型搜索
             // int RoomKind = Convert.ToInt32(Session["house"]);
@@ -564,33 +554,199 @@ namespace HomeManagementSystem2
             }
             return condition;
         }
-    }
 
-    public static class PredicateExtensions
-    {
-        public static Expression<Func<T, bool>> True<T>() { return f => true; }
 
-        public static Expression<Func<T, bool>> False<T>() { return f => false; }
 
-        public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expression1,
-           Expression<Func<T, bool>> expression2)
+        public class HouseInfo
         {
-            var invokedExpression = Expression.Invoke(expression2, expression1.Parameters
-                    .Cast<Expression>());
+            public int photoId
+            {
+                get;
+                set;
+            }
 
-            return Expression.Lambda<Func<T, bool>>(Expression.Or(expression1.Body, invokedExpression),
-            expression1.Parameters);
+            public String Description   //房屋描述
+            {
+                get;
+                set;
+            }
+            //地址
+            public String city
+            {
+                get;
+                set;
+            }
+            public String local_Area  //地址，，，，区域
+            {
+                get;
+                set;
+            }
+            public String Street   //地址      街道
+            {
+                get;
+                set;
+            }
+            public String Community  // 地址      小区
+            {
+                get;
+                set;
+            }
+
+            public String Level  //楼层
+            {
+                get;
+                set;
+            }
+            //户型
+            public int Room      //室
+            {
+                get;
+                set;
+            }
+            public int Hall      //厅
+            {
+                get;
+                set;
+            }
+            public int Toilet      //卫
+            {
+                get;
+                set;
+            }
+            public string Area
+            {
+                get;
+                set;
+            }
+            //类型
+            public String type
+            {
+                get;
+                set;
+            }
+            public String Decoration   //装修
+            {
+                get;
+                set;
+            }
+
+            public String phoneNum      //经纪人电话号码
+            {
+                get;
+                set;
+            }
+            public int Price    //房屋价格
+            {
+                get;
+                set;
+            }
+            public string new_oldhouse
+            {
+                get;
+                set;
+            }
         }
 
-        public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expression1,
-              Expression<Func<T, bool>> expression2)
+        private int[] Price_Parse(string search_condition_price)
         {
-            var invokedExpression = Expression.Invoke(expression2, expression1.Parameters
-                 .Cast<Expression>());
+            int[] price_range = new int[2];
+            if (search_condition_price.Equals("全部"))
+            {
+                price_range[0] = 0;
+                price_range[1] = -1;
+                return price_range;
+            }
 
-            return Expression.Lambda<Func<T, bool>>(Expression.And(expression1.Body,
-                   invokedExpression), expression1.Parameters);
+            if (search_condition_price.Equals("100万以下"))
+            {
+                price_range[0] = 0;
+                price_range[1] = 100;
+                return price_range;
+            }
+
+            if (search_condition_price.Equals("100-150万"))
+            {
+                price_range[0] = 100;
+                price_range[1] = 150;
+                return price_range;
+            }
+            if (search_condition_price.Equals("150-250万"))
+            {
+                price_range[0] = 150;
+                price_range[1] = 250;
+                return price_range;
+            }
+            if (search_condition_price.Equals("250-350万"))
+            {
+                price_range[0] = 250;
+                price_range[1] = 350;
+                return price_range;
+            }
+            if (search_condition_price.Equals("350-500万"))
+            {
+                price_range[0] = 350;
+                price_range[1] = 500;
+                return price_range;
+            }
+            if (search_condition_price.Equals("500万以上"))
+            {
+                price_range[0] = 500;
+                price_range[1] = -1;
+                return price_range;
+            }
+
+            String[] temp = new String[2];
+            temp = search_condition_price.Split('-');
+
+            try
+            {
+                price_range[0] = Int32.Parse(temp[0]);
+                price_range[1] = Int32.Parse(temp[1]);
+            }
+            catch
+            {
+                price_range[0] = 0;
+                price_range[1] = -1;
+            }
+            return price_range;
+
+        }
+
+
+        private int RoomKind_Parse(String search_condition_roomkind)
+        {
+            int roomKind = 0;
+            if (search_condition_roomkind.Equals("全部"))
+            {
+                roomKind = 0;
+            }
+            if (search_condition_roomkind.Equals("一室"))
+            {
+                roomKind = 1;
+            }
+            if (search_condition_roomkind.Equals("二室"))
+            {
+                roomKind = 2;
+            }
+            if (search_condition_roomkind.Equals("三室"))
+            {
+                roomKind = 3;
+            }
+            if (search_condition_roomkind.Equals("四室"))
+            {
+                roomKind = 4;
+            }
+            if (search_condition_roomkind.Equals("五室及以上"))
+            {
+                roomKind = 5;
+            }
+            if (search_condition_roomkind.Equals("别墅"))
+            {
+                roomKind = 6;
+            }
+            return roomKind;
         }
     }
+
 
 }

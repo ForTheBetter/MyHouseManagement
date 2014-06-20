@@ -7,11 +7,29 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HMS_DataEntity;
+using HMS_ComLib;
 
 namespace HomeManagementSystem2
 {
     public partial class _base : System.Web.UI.MasterPage
     {
+        public static List<String> getNewsList()
+        {
+            FirstClassClass firstclass = new FirstClassClass();
+            String newshtm = firstclass.search_news();
+            List<String> newslist = new List<String>();
+            int i = newshtm.IndexOf("mod-list main-list");
+            for (int k = 0; k < 5; k++)
+            {
+                i = newshtm.IndexOf("<a target", i);
+                while (newshtm[i] != '>')
+                    i++;
+                int j = newshtm.IndexOf("</a>", i);
+                newslist.Add(newshtm.Substring(i + 1, j - i - 1));
+            }
+            return newslist;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string s = ConfigurationManager.ConnectionStrings["fcglConnectionString"].ConnectionString;
@@ -20,6 +38,11 @@ namespace HomeManagementSystem2
                string sql = "select * from information";
                 SqlCommand command = new SqlCommand(sql, connection);
                 connection.Open();
+                List<String> newsList = getNewsList();
+                infocontent0.Text = newsList[0];
+                Label2.Text = newsList[1];
+                Label4.Text = newsList[2];
+                Label6.Text = newsList[3];
              /*  using (SqlDataReader reader = command.ExecuteReader())
             
                 {

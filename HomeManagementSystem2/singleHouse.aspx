@@ -10,7 +10,7 @@
     <link href ="css/singleHouse.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="header">
+     <div id="header">
         <div class="banner">
             <div class="tabbar">
                 <div class="tabs">
@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+
     <div class="bar"></div>
     <div id ="content">
         <div id ="propNav">
